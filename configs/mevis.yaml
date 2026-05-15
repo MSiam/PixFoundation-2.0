@@ -1,0 +1,42 @@
+DATASETS:
+  DATASET_RATIO: [1.0, 0.25]
+  TRAIN: ("mevis_train",)
+  TEST: ("mevis_val",)
+INPUT:
+  SAMPLING_FRAME_NUM: 6
+  SAMPLING_FRAME_RANGE: 8
+  SAMPLING_FRAME_SHUFFLE: False
+  # MIN_SIZE_TRAIN_SAMPLING : ["range", "choice", "range_by_clip", "choice_by_clip"]
+  MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+  # RANDOM_FLIP : ["none", "horizontal", "flip_by_clip"]. "horizontal" is set by default.
+  RANDOM_FLIP: "flip_by_clip"
+  AUGMENTATIONS: []
+  MIN_SIZE_TRAIN: (288, 320, 352, 384, 416, 448, 480, 512)
+  MAX_SIZE_TRAIN: 768
+  MIN_SIZE_TEST: 448
+  FORMAT: "RGB"
+  CROP:
+    ENABLED: True
+    TYPE: "absolute_range"
+    SIZE: (384, 600)
+  # For pseudo videos
+  PSEUDO:
+    AUGMENTATIONS: ['rotation']
+    MIN_SIZE_TRAIN: (288, 320, 352, 384, 416, 448, 480, 512)
+    MAX_SIZE_TRAIN: 768
+    CROP:
+      ENABLED: True
+      TYPE: "absolute_range"
+      SIZE: (384, 600)
+  LSJ_AUG:
+    ENABLED: False
+    IMAGE_SIZE: 768
+    MIN_SCALE: 0.1
+    MAX_SCALE: 2.0
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: True
+  NUM_WORKERS: 8
+TEST:
+  DETECTIONS_PER_IMAGE: 1
+  EVAL_PERIOD: 200000000000
+OUTPUT_DIR: 'output/mevis'
