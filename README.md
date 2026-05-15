@@ -1,7 +1,7 @@
 # PixFoundation-2.0: Do Video Multi-Modal LLMs Use Motion in Visual Grounding?
 
-Official implementation of our work PixFoundation 2.0.
-* This codebase only documents the motion existence and motion ordering probes and the evaluation of three SOA video MLLMs: RGA, Sa2VA and GPT-5.0 to showcase the reproducability of the major evaluation and benchmarking part of our work and baselines. The motion-centric adaptation will be made publicly available upon acceptance.
+Official implementation of my work PixFoundation 2.0.
+Release of motion-centric adaptation code, soon ...
 
 ## Motion-Centric Benchmark (MoCentric-Bench)
 
@@ -23,7 +23,7 @@ Multi-modal large language models (MLLMs) have shown impressive generalization a
 
 * Clone the repository recursively to include the submodules
 ```
-git clone --recursive ANON_GIT_URL
+git clone --recursive https://github.com/MSiam/PixFoundation-2.0
 ```
 * Create conda environment
 ```
@@ -51,7 +51,7 @@ python data/create_benchmark_mevis.py --config-file configs/mevis.yaml --dataset
 python data/create_benchmark_mevis.py --config-file configs/mevis.yaml --dataset_root DATA_ROOT --output_dir OUT_DIR --reverse_flag
 python data/create_benchmark_mevis.py --config-file configs/mevis.yaml --dataset_root DATA_ROOT --output_dir OUT_DIR --reverse_flag --left_flag
 ```
-* Move our reverse expressions under data/meta_expressions_reverse_filtered.json to the valid_u subset path.
+* Move the reverse expressions under data/meta_expressions_reverse_filtered.json to the valid_u subset path.
 
 * The final MeVIS directory is as follows:
 ```
@@ -82,7 +82,7 @@ python datasets_/test_loaders.py --config-file configs/mevis.yaml --dataset_root
 * You can follow similar procedure to [Molmo2Track](https://huggingface.co/datasets/allenai/Molmo2-VideoTrackEval).
 
 ## Evaluation
-* Due to the anonymity we only provide the modified Sa2VA loader for our benchmarking, modify accordingly and use the following SHA commit
+* For simplicity I added the modified Sa2VA loader for my benchmarking, modify accordingly and use the following SHA commit
 ```
 git checkout c94a50776e61515d72c5fe1839d3676e27082237
 cp datasets_/sa2va_refVOS.py Sa2VA/projects/llava_sam2/evaluation/dataset/refVOS.py
@@ -93,6 +93,20 @@ cp datasets_/sa2va_refVOS.py Sa2VA/projects/llava_sam2/evaluation/dataset/refVOS
 cd scripts
 bash run_all.sh
 ```
+# Acknowledgements
+
+These repositories were used as part of my work and the benchmarking effort
+* [MeVIS](https://github.com/henghuiding/MeViS)
+* [Sa2VA](https://github.com/bytedance/Sa2VA/)
+* [RGA](https://github.com/qirui-chen/RGA3-release/)
+* [Qwen2.5-VL](https://github.com/QwenLM/Qwen3-VL)
 
 # References
-
+```
+@article{siam2025pixfoundation,
+  title={PixFoundation 2.0: Do Video Multi-Modal LLMs Use Motion in Visual Grounding?},
+  author={Siam, Mennatullah},
+  journal={arXiv preprint arXiv:2509.02807},
+  year={2025}
+}
+```
