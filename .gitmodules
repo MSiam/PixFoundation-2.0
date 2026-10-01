@@ -1,6 +1,7 @@
 [submodule "Sa2VA"]
 	path = Sa2VA
-	url = https://github.com/bytedance/Sa2VA.git
+	url = https://github.com/MSiam/Sa2VA
+	branch = Sa2va-mocentric
 [submodule "RGA3-release"]
 	path = RGA3-release
 	url = https://github.com/qirui-chen/RGA3-release.git
