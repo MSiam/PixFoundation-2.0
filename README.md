@@ -96,7 +96,7 @@ The motion centric adaptation can be applied to any MLLM independant of the arch
 cd scripts
 bash lora_tune_sa2va.sh
 ```
-* This is the set of [weights](https://www.dropbox.com/scl/fi/gy1prfuvtwea9ztm5jh39/lora_weights_mocentric_sa2va.pth?rlkey=mtxz498i259wqg6fu2rvy5ztz&st=769jsl0d&dl=0) that I used in my experiments for the motion-centric Sa2VA. Upon merging with original ByteDance weights you can run the evaluation.
+* This is the set of [weights](https://www.dropbox.com/scl/fi/gy1prfuvtwea9ztm5jh39/lora_weights_mocentric_sa2va.pth?rlkey=mtxz498i259wqg6fu2rvy5ztz&st=769jsl0d&dl=0) for a run in the motion-centric Sa2VA. The Motion-centric Sa2VA reported in my work is an average of multiple runs. Upon merging with original ByteDance weights you can run the evaluation.
 
 * Replace Sa2VA_CKPT in run_all.sh with the correct full path to hugging face checkpoint for evaluation.
 
