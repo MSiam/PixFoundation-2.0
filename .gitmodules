@@ -5,3 +5,6 @@
 [submodule "RGA3-release"]
 	path = RGA3-release
 	url = https://github.com/qirui-chen/RGA3-release.git
+[submodule "molmo2"]
+	path = molmo2
+	url = https://github.com/MSiam/molmo2.git
