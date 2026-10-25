@@ -109,7 +109,7 @@ bash run_train.sh
 ```
 
 # Acknowledgements
-* I thank [Sa2VA](https://github.com/bytedance/Sa2VA) ByteDance authors as I built the experiments for motion-centric adaptation upon their codebase.
+* I thank [Sa2VA](https://github.com/bytedance/Sa2VA) ByteDance and [Molmo2](https://github.com/allenai/molmo2) authors as I built the experiments for motion-centric adaptation upon their codebases.
 
 # References
 Please cite my paper if you find it useful in your research
