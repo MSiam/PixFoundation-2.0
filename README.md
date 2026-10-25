@@ -89,7 +89,7 @@ bash run_all.sh
 ```
 
 ## Motion Centric Adaptation
-The motion centric adaptation can be applied to any MLLM independant of the architecture relying on the synthetic training data. I provide an example with Sa2VA. The forked Sa2VA modified for motion-centric adaptation is provided [here](https://github.com/MSiam/Sa2VA/tree/Sa2va-mocentric).
+The motion centric adaptation can be applied to any MLLM independant of the architecture relying on the synthetic training data. I provide an example with Sa2VA and Molmo2. The forked Sa2VA modified for motion-centric adaptation is provided [here](https://github.com/MSiam/Sa2VA/tree/Sa2va-mocentric). The forked Molmo2 modified for it is provided [here](https://github.com/MSiam/molmo2).
 
 * Train Sa2VA and convert it to Hugging Face Checkpoint
 ```
@@ -101,6 +101,12 @@ bash lora_tune_sa2va.sh
 * Replace Sa2VA_CKPT in run_all.sh with the correct full path to hugging face checkpoint for evaluation.
 
 * Modifications for the LoRA setup including LLM instead of ViT and other hyperparameters can be added to 'Sa2VA/projects/llava_sam2/configs/sa2va_8b_motion.py'.
+
+* Similarly, train Molmo2 and convert it to Hugging Face Checkpoint
+```
+cd molmo2/launch_scripts/
+bash run_train.sh
+```
 
 # Acknowledgements
 * I thank [Sa2VA](https://github.com/bytedance/Sa2VA) ByteDance authors as I built the experiments for motion-centric adaptation upon their codebase.
