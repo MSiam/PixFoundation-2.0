@@ -121,4 +121,7 @@ Please cite my paper if you find it useful in your research
   year={2026}
 }
 ```
+# 📝 License
+ 
+This project code is [MIT](https://github.com/MSiam/PixFoundation-2.0/blob/main/LICENSE) licensed. Any artefact in this repository aside from the code that is built for MeVIS dataset follows their CC BY-NC-SA 4.0 license for non-commercial research purpose only.
 
